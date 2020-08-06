@@ -47,8 +47,8 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 #poster .parentpanel .panel:hover {
@@ -63,6 +63,7 @@ body {
 
 #poster .parentpanel .panel:hover::before {
   display: block;
+  opacity: 1;
 }
 
 #poster .parentpanel .panel p {
@@ -86,13 +87,15 @@ body {
 
 #poster .parentpanel ::before {
   content: " ";
-  display: none;
   width: 90%;
   height: 80%;
   position: absolute;
   top: 10%;
   left: 5%;
+  opacity: 0;
   background-color: rgba(252, 252, 252, 0.75);
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 @media screen and (max-width: 1100px) {
@@ -107,5 +110,38 @@ body {
     width: 80%;
     height: 350px;
   }
+}
+
+.character {
+  position: relative;
+}
+
+/* Add spacing between each country suggestion */
+.suggestion {
+  padding-left: 2px;
+  padding-right: 2px;
+  background-color: whitesmoke;
+  color: black;
+}
+
+/* Change suggestion color when hovering it with the mouse */
+.suggestion:hover {
+  background-color: #adf;
+  cursor: pointer;
+}
+
+/* Position the suggestion list just below the input box */
+#suggestions {
+  position: absolute;
+  border: 1px solid black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 44px;
+  z-index: 100;
+}
+
+#alert {
+  color: wheat;
 }
 /*# sourceMappingURL=style.css.map */
