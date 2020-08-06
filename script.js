@@ -9,9 +9,7 @@ const hash = "c5a95c638e95318764e70214061d8c0e"
     .then(response => response.json())
     .then(data => {
         const results= data.data.results
-        console.log(results.length)
-        let num = results.length;
-        if(num<5){
+
         results.forEach(result => {
            if(result.images[0]!=null){
 
@@ -30,28 +28,7 @@ const hash = "c5a95c638e95318764e70214061d8c0e"
            }
         });
     }
-    else{
-        let num=5;
-        while(num--){
-
-            if(results[num].images[0]!=null){
-
-                const source = results[num].images[0].path + ".jpg"
-                const parentpanel = document.createElement("div")
-                parentpanel.classList+="parentpanel"
-                const panel = document.createElement("div");
-                const paneltext =document.createElement("p");
-                paneltext.textContent= results[num].title;
-                panel.classList+= "panel"
-                panel.style.backgroundImage =`url(${source})`
-    
-                panel.appendChild(paneltext)
-                parentpanel.appendChild(panel)
-                div.appendChild(parentpanel)
-               }
-        }
-    }
-    })
+    )
 
     .catch(err=> {
         console.error(err.message)
