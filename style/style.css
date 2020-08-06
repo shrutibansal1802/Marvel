@@ -2,11 +2,12 @@ body {
   margin: 0;
   max-height: 100vh;
   background-color: #363732;
+  font-family: sans-serif;
 }
 
 #navbar {
   width: 100%;
-  height: 10vh;
+  height: 20vh;
   background-color: #241414;
   color: whitesmoke;
   display: -webkit-box;
@@ -112,16 +113,16 @@ body {
   }
 }
 
-.character {
+#character {
   position: relative;
+  padding: 7px 15px;
 }
 
 /* Add spacing between each country suggestion */
 .suggestion {
-  padding-left: 2px;
-  padding-right: 2px;
-  background-color: whitesmoke;
-  color: black;
+  padding: 4px 3px;
+  background-color: white;
+  color: #353333;
 }
 
 /* Change suggestion color when hovering it with the mouse */
@@ -133,11 +134,11 @@ body {
 /* Position the suggestion list just below the input box */
 #suggestions {
   position: absolute;
-  border: 1px solid black;
+  background-color: white;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  top: 44px;
+  top: 75px;
   z-index: 100;
 }
 
