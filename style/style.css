@@ -27,7 +27,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 #poster .parentpanel {
@@ -48,9 +48,9 @@ body {
 }
 
 #poster .parentpanel:hover {
-  -webkit-box-flex: 1.6;
-      -ms-flex: 1.6;
-          flex: 1.6;
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5;
+          flex: 1.5;
 }
 
 #poster .parentpanel .panel {
@@ -60,6 +60,7 @@ body {
   background-repeat: no-repeat;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  background-position: center;
 }
 
 #poster .parentpanel .panel p {
@@ -75,5 +76,24 @@ body {
   right: 0;
   bottom: 0;
   height: 50px;
+}
+
+@media screen and (max-width: 500px) {
+  #navbar {
+    min-height: 20vh;
+  }
+  #poster {
+    min-height: 75vh;
+  }
+  .parentpanel {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .parentpanel:hover {
+    -webkit-box-flex: 4;
+        -ms-flex: 4;
+            flex: 4;
+  }
 }
 /*# sourceMappingURL=style.css.map */

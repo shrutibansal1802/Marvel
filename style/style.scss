@@ -18,7 +18,7 @@ body{
    text-align: center;
     font-size: 20px;
     display: flex;
-    min-height: 100vh;
+    min-height: 90vh;
 
     .parentpanel{
       flex: 1;
@@ -32,14 +32,16 @@ body{
             transform: scale(0.9);
         }
         &:hover{
-            flex: 1.6;
+            flex: 1.5;
         }
+       
      .panel{
          min-height: 100%;
          width: 100%;
          background-size: cover;
          background-repeat: no-repeat;
          transition: all 0.5s;
+         background-position: center;
 
          p{
              display: none;
@@ -58,4 +60,19 @@ body{
      }
     }
     
+    
+}
+@media screen and (max-width:500px){
+    #navbar{
+        min-height: 20vh;
+    }
+    #poster{
+        min-height: 75vh;
+    }
+    .parentpanel{
+        flex: 1;
+        &:hover{
+            flex: 4;
+        }
+    }
 }
