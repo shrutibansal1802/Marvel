@@ -1,17 +1,25 @@
 body{
     margin: 0;
     max-height: 100vh;
-    background-color: #363732;
+    background-color: #261C15;
     font-family: sans-serif;
 }
 #navbar{
     width: 100%;
     height: 20vh;
-    background-color: rgb(36, 20, 20);
+    background-color: #341254;
     color: whitesmoke;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    p{
+        font-family: 'Roboto Condensed', sans-serif;
+        letter-spacing: 2px;
+        font-size: x-large;
+       
+    }
 }
 
 #poster{
@@ -20,7 +28,7 @@ body{
     font-size: 20px;
     min-height: 90vh;
     max-width: 100vw;
-    border : 2px blue solid;
+    border : 3px #CDBAF2 solid;
     
 
     .parentpanel{
@@ -45,22 +53,22 @@ body{
                transform: scale(0.9);
                background-size: cover;
             }
-            &:hover p{
+            &:hover a{
                 display: block;
             }
 
             &:hover::before{
                 display: block;
                 opacity: 1;
+                border-radius: 4px;
+                box-shadow: 1px 3px 8px 1px black;
                }
             
-            p{
+            a{
                 display: none;
-                font-size: 20px;
-                font-weight: bold;
+                font-size: 30px;
                 color: #362b2b !important;
-                font-family: sans-serif;
-                text-align: center;
+                font-family: 'Roboto Condensed', sans-serif;
                 padding-left: 10px;
                 padding-right: 10px;
                 margin: auto;
@@ -72,6 +80,7 @@ body{
                 height: 50px;
                 cursor: pointer;
             }
+           
           
         }
         ::before{

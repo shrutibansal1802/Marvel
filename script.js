@@ -18,12 +18,15 @@ function getcomics(id){
             const parentpanel = document.createElement("div")
             parentpanel.classList+="parentpanel"
             const panel = document.createElement("div");
-            const paneltext =document.createElement("p");
-            paneltext.textContent= result.title;
+
+            const paneltitle =document.createElement("a");
+            paneltitle.textContent = result.title;
+           paneltitle.href = result.urls[0].url;
+           console.log(paneltitle)
             panel.classList+= "panel"
             panel.style.backgroundImage =`url(${source})`
 
-            panel.appendChild(paneltext)
+            panel.appendChild(paneltitle)
             parentpanel.appendChild(panel)
             div.appendChild(parentpanel)
            }
